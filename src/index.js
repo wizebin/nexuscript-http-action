@@ -8,7 +8,7 @@ wrapAction((properties, sendMessage) => {
     const result = fetch(url, {
       method: verb,
       headers,
-      body: verb !== 'GET' ? body : undefined,
+      body: verb.toLowerCase() !== 'get' ? body : undefined,
     });
 
     result.then(data => {

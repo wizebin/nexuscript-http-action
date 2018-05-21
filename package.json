@@ -1,7 +1,7 @@
 {
   "name": "nexuscript-bash-action",
   "version": "1.0.0",
-  "description": "",
+  "description": "Send http messages from Nexuscript",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack --mode development",
@@ -16,5 +16,20 @@
   "dependencies": {
     "nexusdk": "github:wizebin/nexusdk",
     "react-native-digest-fetch": "^1.0.4"
+  },
+  "nexuscript": {
+    "type": "action",
+    "author": "nexuscript",
+    "price": "free",
+    "configuration": {
+      "url": "string",
+      "verb": "string",
+      "headers": "object",
+      "body": "object"
+    },
+    "category": "web",
+    "build_command": "npm run build",
+    "dist_folder": "dist",
+    "dist_file": "dist/main.js"
   }
 }
